@@ -17,5 +17,7 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDke/THYxcwPEWBzN8mtf4BTXMhvVWXZcfVX
 chown -R ansible:ansible /home/ansible/
 chmod 400 /home/ansible/.ssh/authorized_keys
 
+# Разрешаем этому пользователю делать все
+echo "ansible ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ansible
 
 exit 0
